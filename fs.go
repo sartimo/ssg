@@ -1,4 +1,4 @@
-package ssg
+package main
 
 import (
 	"errors"
