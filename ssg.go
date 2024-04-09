@@ -326,7 +326,7 @@ func (s *Site) createRSSFeed() error {
 		Channel: Channel{
 			Title:         s.Title,
 			Link:          s.SiteUrl,
-            Generator:     "Gozer",
+            Generator:     "SSG",
 			LastBuildDate: time.Now().Format(time.RFC1123Z),
 			Items:         items,
 		},
@@ -388,9 +388,9 @@ func main() {
 
 	command := os.Args[len(os.Args)-1]
 	if showHelp || (command != "build" && command != "serve" && command != "new") {
-		fmt.Printf(`Gozer - a fast & simple static site generator
+		fmt.Printf(`SSG - a fast & simple static site generator
 
-Usage: gozer [OPTIONS] <COMMAND>
+Usage: ssg [OPTIONS] <COMMAND>
 
 Commands:
 	build	Deletes the output directory if there is one and builds the site
@@ -442,7 +442,7 @@ func createDirectoryStructure(rootPath string) error {
 	}{
 		{"config.toml", []byte("url = \"http://localhost:8080\"\ntitle = \"My website\"\n")},
 		{"templates/default.html", []byte("<!DOCTYPE html>\n<head>\n\t<title>{{ .Title }}</title>\n</head>\n<body>\n{{ .Content }}\n</body>\n</html>")},
-		{"content/index.md", []byte("+++\ntitle = \"Gozer!\"\n+++\n\nWelcome to my website.\n")},
+		{"content/index.md", []byte("+++\ntitle = \"SSG!\"\n+++\n\nWelcome to my website.\n")},
 	}
 	for _, f := range files {
 		if err := os.WriteFile(filepath.Join(rootPath, f.Name), f.Content, 0655); err != nil {
