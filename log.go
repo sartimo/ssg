@@ -1,4 +1,4 @@
-package main
+package ssg
 
 import (
 	stdlog "log"
