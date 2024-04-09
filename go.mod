@@ -1,4 +1,4 @@
-module github.com/dannyvankooten/gozer
+module github.com/sartimo/ssg
 
 go 1.22
 
