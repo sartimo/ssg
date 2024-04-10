@@ -2,6 +2,7 @@
 title: Multi-tenancy Kubernetes with Virtual Clusters
 date: 2023-09-26
 author: Michael Zeevi
+description: asasasasassa
 keywords:
 - kubernetes
 - multitenancy

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"$if(lang)$ lang="$lang$" xml:lang="$lang$"$endif$$if(dir)$ dir="$dir$"$endif$>
+  <head>
+    <title>$title$</title>
+    $if(author)$
+    <meta name="owner" content="$author$">
+    <meta name="designer" content="$author$">
+    $for(author)$
+    <meta name="author" content="$author$">
+    $endfor$
+    <meta name="copyright" content="$author$">
+    $endif$
+    $if(date)$
+    <meta name="date" content="$date$">
+    <meta name="revised" content="$date$">
+    $endif$
+    $if(description)$
+    <meta name="description" content="$description$">
+    $endif$
+    $if(keywords)$
+    <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$">
+    $endif$
+    <meta name="generator" content="pandoc"> <!-- template by Timo Sarkar -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    $if(lang)$
+    <meta name="language" content=”$lang$”>
+    <meta http-equiv="content-language" content=”$lang$”>
+    $endif$
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta charset="utf-8">
+    $for(css)$
+    <link rel="stylesheet" href="$css$">
+    $endfor$
+  </head>
+  <body>
+    <main>
+        $if(title)$
+        <header>
+            <h1 id="content-title">$title$</h1>
+            <nav><a href="articles.html"><img src="https://thinkmoult.com/gifs/back.gif" alt="Back" class="gif" /> Back to articles</a></nav>
+
+            $if(subtitle)$
+            <p class="content-header subtitle">$subtitle$</p>
+            $endif$
+            $for(author)$
+            <p class="content-header author">$author$</p>
+            $endfor$
+            $if(date)$
+            <p class="content-header date"><time datetime="$date$">$date$</time></p>
+            $endif$
+        </header>
+        $endif$
+        $body$
+    </main>
+    $if(include-after)$
+        $for(include-after)$
+            $include-after$
+        $endfor$
+    $endif$
+    <section>
+      <h2>Comments</h2>
+      <p>If you have any comments, please send them to <a href="mailto:sartimo10@gmail.com">sartimo10@gmail.com</a>.</p>
+    </section>
+    <footer>
+      <h3>License</h3>
+      <p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>, unless explicitly mentioned in the article.</p>
+    </footer>
+  </body>
+</html>

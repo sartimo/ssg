@@ -2,6 +2,7 @@
 title: A deep dive into the Docker Socket and using Docker from within containers
 date: 2022-05-01
 author: Michael Zeevi
+description: asasasasassa
 keywords:
 - docker
 - containers

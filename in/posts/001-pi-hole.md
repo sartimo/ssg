@@ -2,12 +2,14 @@
 title: Setting up a Pi-hole on my Raspberry Pi
 date: 2021-05-30
 author: Michael Zeevi
+description: asasasasassa
 keywords:
 - pi-hole
 - raspberry-pi
 - dns 
 lang: en-us
 ---
+
 ## Intro
 Today's personal endeavor was setting up a [Pi-hole](https://pi-hole.net/) to block unwanted content for all devices connected to my home network.
 

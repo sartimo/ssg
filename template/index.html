@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"$if(lang)$ lang="$lang$" xml:lang="$lang$"$endif$$if(dir)$ dir="$dir$"$endif$>
+  <head>
+    <title>$title$</title>
+    $if(author)$
+    <meta name="owner" content="$author$">
+    <meta name="designer" content="$author$">
+    $for(author)$
+    <meta name="author" content="$author$">
+    $endfor$
+    <meta name="copyright" content="$author$">
+    $endif$
+    $if(date)$
+    <meta name="date" content="$date$">
+    <meta name="revised" content="$date$">
+    $endif$
+    $if(description)$
+    <meta name="description" content="$description$">
+    $endif$
+    $if(keywords)$
+    <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$">
+    $endif$
+    <meta name="generator" content="pandoc"> <!-- template by Timo Sarkar -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    $if(lang)$
+    <meta name="language" content=”$lang$”>
+    <meta http-equiv="content-language" content=”$lang$”>
+    $endif$
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta charset="utf-8">
+    $for(css)$
+    <link rel="stylesheet" href="$css$">
+    $endfor$
+  </head>
+  <body>
+    $if(include-before)$
+    $for(include-before)$
+        $include-before$
+    $endfor$
+    $endif$
+    <main>
+      $body$
+    </main>
+    $if(include-after)$
+        $for(include-after)$
+            $include-after$
+        $endfor$
+    $endif$
+  </body>
+</html>
